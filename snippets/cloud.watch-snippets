@@ -1,0 +1,18 @@
+{
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Code snippets for CloudWatch Metric
+"Add Alarm on a CloudWatch Metric": {
+  "prefix": "cloudwatch.alarm",
+  "body": [
+    "cloudwatch.Alarm(self, \"${1:alarm error}\",",
+    "    comparison_operator=cloudwatch.ComparisonOperator.GREATER_THAN_THRESHOLD,",
+    "    threshold=${2:thredhold value},",
+    "    evaluation_periods=${3:evaluation periods value},",
+    "    metric=alias.metric_errors()"
+  ],
+  "description": "Add Alarm on a CloudWatch Metric"
+}
+
+
+}
